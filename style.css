@@ -1,0 +1,152 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #002D72, #1E90FF);
+  transition: background 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 420px;
+  position: relative;
+  
+}
+h1{
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.search {
+ display: flex;
+ gap: 10px;
+
+}
+
+input {
+  padding: 12px;
+  width: 70%;
+   border-radius: 10px;
+   border: none;
+   outline: none;
+   flex: 1;
+   font-size: 14px;
+   background: rgba(255,255,255,0.85);
+}
+
+button {
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  
+}
+button:hover{
+    background: black;
+    transform: scale(1.05);
+}
+.weather-box {
+  margin-top: 20px;
+}
+#cityName{
+    font-size: 22px;
+    font-weight: 600;
+}
+#temp {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#condition {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+#extra {
+  font-size: 15px;
+  opacity: 0.8;
+  color: white;
+}
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.forecast-item {
+  text-align: center;
+  color: rgb(94, 75, 75);
+  transition: transform 0.3s ease;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+.forecast-item:hover{
+    transform: translateY(-5px);
+}
+
+
+.forecast-item img {
+  width: 50px;
+}
+#toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dark {
+  background: linear-gradient(to right, #141E30, #243B55);
+}
+
+.dark .app {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dark button{
+    background: #222;
+}
+
+.dark input {
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.dark .forecast-item {
+  background: rgba(0,0,0,0.3);
+}
+@media (max-width: 400px) {
+  .app {
+    padding: 15px;
+  }
+
+  #temp {
+    font-size: 36px;
+  }
+
+  .forecast {
+    flex-wrap: wrap;
+  }
+
+  .forecast-item {
+    flex: 45%;
+  }
+}
